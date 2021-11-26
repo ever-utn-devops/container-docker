@@ -6,8 +6,11 @@ module.exports = function (app){
     app.route('/containers')
         .get(containers.get_all);
 
-   /* app.route('/containers/:id')
-        .get(containers.get_by_id);*/
+     app.route('/containers')
+        .post(containers.create);
+
+   app.route('/containers/:id')
+        .get(containers.get_by_id);
 
    app.route('/technicians')
         .get(technicians.get_all);

@@ -9,3 +9,8 @@ console.log(containersdata);
 exports.get_all = function(re, res){
     return containersdata;
 };
+
+exports.get_by_id = function(conId, pass, res){
+    var filtered = _.where(containersdata, {id: conId, password: pass});
+    return filtered;
+};
