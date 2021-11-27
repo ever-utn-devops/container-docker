@@ -15,6 +15,6 @@ module.exports = function (app){
    app.route('/technicians')
         .get(technicians.get_all);
 
-   /* app.route('/technicians/:id')
-        .get(technicians.get_by_id);*/
+   app.route('/technicians')
+        .post(technicians.validateAuth);
 };

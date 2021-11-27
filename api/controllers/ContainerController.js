@@ -12,5 +12,5 @@ exports.create = function(req, res){
 
 exports.get_by_id = function(req, res){
     var model = require('../models/containersModel');
-    res.json(model.get_by_id(req.body.id));
+    res.json(model.get_by_id(req.params.id));
 };
