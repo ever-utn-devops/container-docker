@@ -9,12 +9,26 @@ module.exports = function (app){
      app.route('/containers')
         .post(containers.create);
 
+     app.route('/containers')
+        .delete(containers.remove);        
+
    app.route('/containers/:id')
         .get(containers.get_by_id);
+
+/*--------------------------------------------------------------*/
 
    app.route('/technicians')
         .get(technicians.get_all);
 
-   app.route('/technicians')
+   app.route('/technicians/:id')
+        .get(technicians.get_by_id);
+
+   app.route('/technicians/validateAuth')
         .post(technicians.validateAuth);
+
+   app.route('/technicians')
+        .post(technicians.create);
+
+   app.route('/technicians')
+        .delete(technicians.remove); 
 };
