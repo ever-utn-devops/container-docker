@@ -2,7 +2,7 @@
 
 var _ = require('underscore');
 var util = require('../util/util');
-var jsonFile = './api/data/technicians.json';
+var jsonFile = './auth/data/users.json';
 
 let techsData = JSON.parse(util.readFile(jsonFile));
 

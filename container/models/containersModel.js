@@ -2,7 +2,7 @@
 
 var _ = require('underscore');
 var util = require('../util/util');
-var jsonFile = './api/data/containers.json';
+var jsonFile = './container/data/containers.json';
 
 let containersdata = JSON.parse(util.readFile(jsonFile));
 

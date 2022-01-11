@@ -1,6 +1,6 @@
 'use strict';
 
-let model = require('../models/technicianModel');
+let model = require('../models/userModel');
 
 exports.get_all = function(req, res){
     res.json(model.get_all());
