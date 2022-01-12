@@ -1,8 +1,8 @@
 'use strict';
 const axios = require('axios');
 
-const container_url = `http://localhost:3000/containers`;
-const user_url = `http://localhost:3001/users`;
+const container_url = `http://host.docker.internal:3000/containers`;
+const user_url = `http://host.docker.internal:3001/users`;
 
 exports.container_get_all = function(req, res){
     let url = container_url;
