@@ -1,0 +1,53 @@
+version: "3"
+
+services:
+  auth:
+    hostname: auth
+    build:
+      context: .
+      dockerfile: ./auth_api/Dockerfile
+    ports:
+      - "3001:3001"
+    expose:
+      - 3001
+    networks:
+      - app-network
+    restart: always
+    #links:
+     # - proxy
+
+
+  recipient:
+    hostname: recipient
+    build:
+      context: .
+      dockerfile: ./recipient_api/Dockerfile
+    ports:
+      - 3000:3000
+    expose:
+      - 3000
+    networks:
+      - app-network
+    restart: always
+    #links:
+     # - proxy
+
+  proxy:
+    hostname: proxy
+    build:
+      context: .
+      dockerfile: ./proxy_api/Dockerfile
+    ports:
+      - 3002:3002
+    expose:
+      - 3002
+    networks:
+      - app-network
+    restart: always
+    links:
+      - recipient
+     # - auth
+
+networks:
+  app-network:
+    driver: bridge
