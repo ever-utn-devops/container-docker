@@ -10,12 +10,9 @@ services:
     ports:
       - "3001:3001"
     expose:
-      - 3001
-    #networks:
-     # - app-network
+      - 3001  
     restart: always
-    #links:
-     # - proxy
+
 
 
   recipient:
@@ -26,13 +23,9 @@ services:
     ports:
       - "3000:3000"
     expose:
-      - 3000
-    #networks:
-     # - app-network
+      - 3000 
     restart: always
-    #links:
-     # - proxy
-
+  
   proxy:
     hostname: proxy
     build:
@@ -42,13 +35,7 @@ services:
       - "3002:3002"
     expose:
       - 3002
-    #networks:
-     # - app-network
     restart: always
     links:
       - recipient
       - auth
-
-#networks:
- # app-network:
-  #  driver: bridge
