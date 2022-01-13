@@ -1,27 +1,33 @@
 # Docker Containers
 
-## Common command in Docker
-- **docker image**: it displays all images create in docker
+## Common commands in Docker
 - **docker pull**: it pulls images from Docker
     > docker pull debian
 - **docker push**: it pusches an image to a repository to a registry.
-    > docker push ebarahona/myimage
+    > docker push myimage
 - **docker build: it creates a new images based on a existing image.
-    > docker build -t ebarahona/myimage .
+    > docker build -t myimage .
     
-    -t --> it is used to specify an image name. <br/>    
+    -t --> it is used to specify an image name.  
     . --> it is used to specify the path where it needs to find the Dockerfile
 
 - **docker run**: it creates a container based on an image.
-    > docker run -dp 3000:3001 --name mycontainer
+    > docker run -dp 3000:3001 --name mycontainer myimage
 
     **-d** --> it indicates the container will run in background <br/>
     **-p** --> it indicates the ports (external:internal) where the container will run<br/>
     **--name** --> it indicates the container name.
-
+- **docker image**: it displays all images create in docker
+- **docker ps**: it displays all containers are running.
+- **docker stop**: it stops a container
+    > docker stop mycontainer
 - **docker rm**: it removes a container
     > docker rm mycontainer
-
+- **docker rm**: it removes an image
+    > docker rmi myimage
+- **docker restart**: it restarts a container
+    > docker restart mycontainer
+    
 # Workshop -  Working with Docker containers
 
 ## Running the RestApi locally
