@@ -11,9 +11,19 @@ _**Running the RestApi locally**_
 6. Access the api with this url: [**http://localhost:3000/containers**](url) or [**http://localhost:3001/users**](url) or [**http://localhost:3002/status**](url)
 
 **Running every project separately on container**
-docker build -t <<mage-name you want to specify>>
+
+docker build -t mage-name-you-want-to-specify
+
+**Example:** doker build -t ebarahona/recipient-api-image
+
+Creating a container based on the image created previously
+
+docker run -dp 3000:3000 --name docker-name-you-want-specify image-name-you-specified
+
+**Example:** docker run -dp 3000:3000 --name ebarahona/recipient-api ebarahona/recipient-api-image
 
 **Running all restapi projects on containers**
+
 docker-compose up --build
 
 
