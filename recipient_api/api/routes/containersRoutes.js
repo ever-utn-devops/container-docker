@@ -2,16 +2,16 @@
 module.exports = function (app){
     var containers = require('../controllers/ContainerController');
 
-    app.route('/containers')
+    app.route('/recipients')
         .get(containers.get_all);
 
-     app.route('/containers')
+     app.route('/recipients')
         .post(containers.create);
 
-     app.route('/containers')
+     app.route('/recipients')
         .delete(containers.remove);        
 
-   app.route('/containers/:id')
+   app.route('/recipients/:id')
         .get(containers.get_by_id);
 
 };

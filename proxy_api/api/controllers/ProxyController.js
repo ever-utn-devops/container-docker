@@ -12,7 +12,7 @@ exports.container_get_all = function(req, res){
         url
     })
     .then(function (response) {
-        res.send(JSON.stringify(response.data));
+        res.send(response.data);
     })
     .catch(function (error) {
         console.log(error);
@@ -26,7 +26,7 @@ exports.container_get_by_id = function(req, res){
         url
     })
     .then(function (response) {
-        res.send(JSON.stringify(response.data));
+        res.send(response.data);
     })
     .catch(function (error) {
         console.log(error);
@@ -40,7 +40,7 @@ exports.users_get_all = function(req, res){
         url
     })
     .then(function (response) {
-        res.send(JSON.stringify(response.data));
+        res.send(response.data);
     })
     .catch(function (error) {
         console.log(error);
@@ -54,7 +54,7 @@ exports.users_get_by_id = function(req, res){
         url
     })
     .then(function (response) {
-        res.send(JSON.stringify(response.data));
+        res.send(response.data);
     })
     .catch(function (error) {
         console.log(error);
