@@ -2,10 +2,10 @@
 module.exports = function (app){
     var proxy = require('../controllers/ProxyController');
 
-   app.route('/containers')
+   app.route('/recipients')
         .get(proxy.container_get_all);
 
-   app.route('/containers/:id')
+   app.route('/recipients/:id')
         .get(proxy.container_get_by_id);
 
    app.route('/users/')
