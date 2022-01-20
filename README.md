@@ -30,6 +30,8 @@
     
 - **docker network create**: it creates a new network inside of Docker
     > docker network create mynetwork-name
+- **docker network rm**: it removes an existing network inside of Docker
+    > docker network rm mynetwork-name
 - **running a container with a network**
     > docker run -dp 3000:3000 --network mynetwork-name --name mycontainer-name myimage-name
 - **running a container and sending it environment variables**
