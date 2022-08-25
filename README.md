@@ -28,6 +28,8 @@
 - **docker restart**: it restarts a container
     > docker restart mycontainer
     
+- **docker container exec -it <container-id> ls <path-to-directory> **: It is to go into a specific folder in a container
+
 - **docker network create**: it creates a new network inside of Docker
     > docker network create mynetwork-name
 - **docker network rm**: it removes an existing network inside of Docker
