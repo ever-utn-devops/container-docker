@@ -34,6 +34,8 @@
     > docker network create mynetwork-name
 - **docker network rm**: it removes an existing network inside of Docker
     > docker network rm mynetwork-name
+- **docker inspect containerId**: It inspects and displayes the container configuration
+    > Example: docker inspect fe09ab279e47
 - **running a container with a network**
     > docker run -dp 3000:3000 --network mynetwork-name --network-alias myalias --name mycontainer-name myimage-name
 - **running a container and sending it environment variables**
